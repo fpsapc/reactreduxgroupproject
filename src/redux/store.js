@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import dragonReducer from './dragons/dragonSlice';
-import rocketReducer from './rockets/rocketsSlice';
+
+import rocketReducer, { fetchRockets } from './rockets/rocketsSlice';
 
 const store = configureStore({
   reducer: {
@@ -8,5 +9,7 @@ const store = configureStore({
     dragons: dragonReducer,
   },
 });
+
+store.dispatch(fetchRockets());
 
 export default store;
