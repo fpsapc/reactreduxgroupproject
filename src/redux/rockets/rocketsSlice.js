@@ -4,7 +4,7 @@ const initialState = {
   rockets: [],
 };
 const rocketsSlice = createSlice({
-  name: 'books',
+  name: 'rockets',
   initialState,
   reducers: {},
 
