@@ -5,7 +5,7 @@ const Navbar = () => (
   <nav className="navBar">
     <div className="navItems">
       <ul className="navLinks">
-        <li>MyProfile</li>
+        <li><Link to="myProfile">MyProfile</Link></li>
         <li><Link to="missions">Missions</Link></li>
         <li><Link to="rockets">Rockets</Link></li>
         <li><Link to="dragons">Dragons</Link></li>
