@@ -1,12 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => (
   <nav className="navBar">
     <div className="navItems">
       <ul className="navLinks">
         <li>MyProfile</li>
-        <li>Missions</li>
-        <li>Rockets</li>
+        <li><Link to="missions">Missions</Link></li>
+        <li><Link to="rockets">Rockets</Link></li>
+        <li><Link to="dragons">Dragons</Link></li>
       </ul>
     </div>
     <div className="logoTitleContainer">
