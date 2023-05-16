@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Missions from './components/Missions';
 import Rockets from './components/Rockets';
 import MyProfile from './components/MyProfile';
+import Dragons from './components/Dragons';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route exact path="missions" element={<Missions />} />
           <Route exact path="rockets" element={<Rockets />} />
           <Route exact path="/" element={<MyProfile />} />
+          <Route exact path="dragons" element={<Dragons />} />
         </Routes>
       </div>
     </>
