@@ -51,8 +51,16 @@
   list-style: none;
 }
 
-.navLinks li:hover {
+.navLinks li a {
+  text-decoration: none;
+}
+
+.navLinks li a:hover {
   color: black;
   text-decoration: underline;
   cursor: pointer;
+}
+
+.navLinks li a:active {
+  text-decoration: underline;
 }

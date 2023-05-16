@@ -33,7 +33,6 @@ const rocketsSlice = createSlice({
       state.rockets = action.payload;
     });
   },
-
 });
 
 export default rocketsSlice.reducer;
