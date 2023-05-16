@@ -3,9 +3,9 @@ import axios from 'axios';
 
 // Initial state
 const InitialState = { missions: [], isLoading: false };
-const baseURL = 'https://api.spacexdata.com/v3/missions'
+const baseURL = 'https://api.spacexdata.com/v3/missions';
 
-//============= Asynchronous =============
+//= ============ Asynchronous =============
 
 export const getMissionFromAPI = createAsyncThunk(
   'missions/getMissionFromAPI',
@@ -36,7 +36,7 @@ const missionSlice = createSlice({
 
     leavedMission: (state, action) => {
       const newState = state.missions.map((mission) => {
-        if (mission.id === action.playload) {
+        if (mission.id === action.payload) {
           return { ...mission, joined: false };
         }
         return mission;
@@ -46,13 +46,15 @@ const missionSlice = createSlice({
   },
   extraReducers: {
     [getMissionFromAPI.fulfilled]: (state, action) => {
-      const missions = action.playload.map(({ mission_id: id, mission_name: missionName, description }) => ({
+      const missions = action.playload.map(({
+        mission_id: id,
+        mission_name: missionName, description,
+      }) => ({
         id,
         missionName,
         description,
-      }),
-    );
-    return { ...state, missions};
+      }));
+      return { ...state, missions };
     },
     [getMissionFromAPI.rejected]: (state) => ({ ...state, isLoading: false }),
   },
@@ -64,4 +66,4 @@ export const isLoading = (state) => state.missions.isLoading;
 // Export the action
 export const { joinedMission, leavedMission } = missionSlice.actions;
 // Export default the reducer
-export default missionSlice.reducer
+export default missionSlice.reducer;
