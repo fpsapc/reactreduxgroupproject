@@ -13,10 +13,15 @@ const singleMissions = ({ mission }) => {
         <div className={mission?.joind ? 'member-badge active-mission' : 'member-badge'}>
 
          {mission?.joined ? 'Active Member' : 'NOT A MEMBER'}
-
         </div>
       </td>
+      <td>
+        <button className={mission.joind ? 'leaveBtn' : 'joinBtn'}
+          type='button' onClick>
+        </button>
+      </td>
     </tr>
+  
   );
 };
 
