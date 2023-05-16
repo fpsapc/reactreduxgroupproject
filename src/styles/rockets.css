@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.rocketContainer {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 10rem;
+}
+
+.rocketData {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.reserveBtn {
+  width: 8rem;
+  height: 2rem;
+  background-color: #0275d8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
