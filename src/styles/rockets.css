@@ -24,3 +24,27 @@
   border: none;
   border-radius: 5px;
 }
+
+.reservedBtn {
+  width: 8rem;
+  height: 2rem;
+  background-color: #757575;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.reserveBtn:hover {
+  cursor: pointer;
+}
+
+.reservationBadge {
+  background-color: #0cb39c;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.logo {
+  width: 3.5rem;
+}
