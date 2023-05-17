@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../img/logo.png';
 
 const Navbar = () => (
   <nav className="navBar">
@@ -13,7 +14,7 @@ const Navbar = () => (
     </div>
     <div className="logoTitleContainer">
       <h2 className="navTitle">Space Travelers Hub</h2>
-      <img src="./img/logo.png" alt="logo" />
+      <img className="logo" src={logo} alt="logo" />
     </div>
   </nav>
 );
