@@ -63,4 +63,5 @@ export const isLoading = (state) => state.missions.isLoading;
 // Export the actions
 export const { joinedMission, leavedMission } = missionSlice.actions;
 // Export default the reducer
+
 export default missionSlice.reducer;
