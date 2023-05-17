@@ -65,13 +65,13 @@
   text-decoration: underline;
 }
 
-/*===================== MISSION PAGE =========================*/
+/* ===================== MISSION PAGE ========================= */
 .missionContainer {
   margin: 1rem 5rem 1rem 5rem;
 }
 
 .missions {
-  width: 100%
+  width: 100%;
 }
 
 table {
@@ -97,11 +97,6 @@ td:nth-child(1) {
   font-size: 1.2rem;
   font-weight: 700;
   padding: 0 0 0 0 !important;
-}
-
-td:nth-child(3) {
-  width: 10rem;
-  text-align: center;
 }
 
 td:nth-child(3) {
