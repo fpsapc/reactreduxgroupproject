@@ -1,4 +1,12 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { createSlice } from '@reduxjs/toolkit';
 
+const initialState = {
+  missions: [],
+};
+const missionSlice = createSlice({
+  name: 'missions',
+  initialState,
+  reducers: {},
+});
 
+export default missionSlice.reducer;
