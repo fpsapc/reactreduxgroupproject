@@ -1,16 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const initialState = {
-  missions: [],
-};
-const missionSlice = createSlice({
-  name: 'missions',
-  initialState,
-  reducers: {},
-});
-
-=======
 // Initial state
 const initialState = { missions: [], isLoading: false };
 const baseURL = 'https://api.spacexdata.com/v3/missions';
