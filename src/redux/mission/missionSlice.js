@@ -2,14 +2,13 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 // Initial state
-const InitialState = { missions: [], isLoading: false };
-const baseURL = 'https://api.spacexdata.com/v3/missions'
+const initialState = { missions: [], isLoading: false };
+const baseURL = 'https://api.spacexdata.com/v3/missions';
 
-//============= Asynchronous =============
+// =============== Asynchronous =============
 
 export const getMissionFromAPI = createAsyncThunk(
   'missions/getMissionFromAPI',
-
   async (thunkAPI) => {
     try {
       const response = await axios.get(baseURL);
@@ -21,7 +20,7 @@ export const getMissionFromAPI = createAsyncThunk(
 );
 
 const missionSlice = createSlice({
-  InitialState,
+  initialState,
   name: 'missions',
   reducers: {
     joinedMission: (state, action) => {
@@ -33,10 +32,9 @@ const missionSlice = createSlice({
       });
       return { ...state, missions: newState };
     },
-
     leavedMission: (state, action) => {
       const newState = state.missions.map((mission) => {
-        if (mission.id === action.playload) {
+        if (mission.id === action.payload) {
           return { ...mission, joined: false };
         }
         return mission;
@@ -46,22 +44,23 @@ const missionSlice = createSlice({
   },
   extraReducers: {
     [getMissionFromAPI.fulfilled]: (state, action) => {
-      const missions = action.playload.map(({ mission_id: id, mission_name: missionName, description }) => ({
-        id,
-        missionName,
-        description,
-      }),
-    );
-    return { ...state, missions};
+      const missions = action.payload.map(
+        ({ mission_id: id, mission_name: missionName, description }) => ({
+          id,
+          missionName,
+          description,
+        }),
+      );
+      return { ...state, missions };
     },
     [getMissionFromAPI.rejected]: (state) => ({ ...state, isLoading: false }),
   },
 });
 
-// Espose the state
+// Expose the state
 export const allMissions = (state) => state.missions.missions;
 export const isLoading = (state) => state.missions.isLoading;
-// Export the action
+// Export the actions
 export const { joinedMission, leavedMission } = missionSlice.actions;
 // Export default the reducer
-export default missionSlice.reducer
+export default missionSlice.reducer;
