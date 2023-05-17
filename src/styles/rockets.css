@@ -37,3 +37,10 @@
 .reserveBtn:hover {
   cursor: pointer;
 }
+
+.reservationBadge {
+  background-color: #0cb39c;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
