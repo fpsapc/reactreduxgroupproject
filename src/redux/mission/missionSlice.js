@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 // Initial state
 const initialState = { missions: [], isLoading: false };
@@ -11,8 +10,9 @@ export const getMissionFromAPI = createAsyncThunk(
   'missions/getMissionFromAPI',
   async (thunkAPI) => {
     try {
-      const response = await axios.get(baseURL);
-      return response.data;
+      const response = await fetch(baseURL);
+      const result = await response.json();
+      return result;
     } catch (error) {
       return thunkAPI.rejectWithValue('Something goes wrong.');
     }
@@ -63,4 +63,5 @@ export const isLoading = (state) => state.missions.isLoading;
 // Export the actions
 export const { joinedMission, leavedMission } = missionSlice.actions;
 // Export default the reducer
+
 export default missionSlice.reducer;
