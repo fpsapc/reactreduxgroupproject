@@ -35,43 +35,36 @@ const MyProfile = () => {
       </div>
       <div>
         <h2 className="rocketTitle"> My Rockects</h2>
-        <table>
-          <ul className="reservedRockets">
-            { rocketFiltered.length > 0 ? (
-              rocketFiltered.map((rocket) => (
-                <tr key={rocket.id}>
-                  <td>
-                    {rocket.rocketName}
-                  </td>
-                </tr>
-              ))
-            ) : (
-              <li>
-                <p className="noReserve">No Rocket booked </p>
+        <ul className="reservedRockets">
+          { rocketFiltered.length > 0 ? (
+            rocketFiltered.map((rocket) => (
+              <li key={rocket.id}>
+                {rocket.rocketName}
               </li>
-            )}
-          </ul>
-        </table>
+            ))
+          ) : (
+            <li>
+              <p className="noReserve">No Rocket booked </p>
+            </li>
+          )}
+        </ul>
       </div>
       <div>
         <h2 className="rocketTitle"> My Dragons</h2>
-        <table>
-          <ul className="reservedRockets">
-            { filteredDragons.length > 0 ? (
-              filteredDragons.map((dragon) => (
-                <tr key={dragon.id}>
-                  <td>
-                    {dragon.name}
-                  </td>
-                </tr>
-              ))
-            ) : (
-              <li>
-                <p className="noReserve">No Dragon booked </p>
+        <ul className="reservedRockets">
+          { filteredDragons.length > 0 ? (
+            filteredDragons.map((dragon) => (
+              <li key={dragon.id}>
+                {dragon.name}
               </li>
-            )}
-          </ul>
-        </table>
+            ))
+          ) : (
+            <li>
+              <p className="noReserve">No Dragon booked </p>
+            </li>
+          )}
+        </ul>
+
       </div>
     </>
   );
