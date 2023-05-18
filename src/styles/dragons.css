@@ -35,3 +35,20 @@
   border: none;
   border-radius: 10px;
 }
+
+.cancel {
+  background-color: rgb(201, 194, 194);
+  color: black;
+  font-size: 1em;
+  padding: 0.5em;
+  border: 1px solid #0275d8;
+  border-radius: 10px;
+}
+
+.reserved {
+  background-color: green;
+  color: white;
+  font-size: 0.7em;
+  border-radius: 5px;
+  padding: 0 0.2em;
+}
