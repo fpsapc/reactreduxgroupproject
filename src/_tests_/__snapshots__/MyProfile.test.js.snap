@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render correctly and matches the My Profile snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="mainContainer"
+  >
+    <section
+      class="myMissions"
+    >
+      <span
+        class="sectionTitle"
+      >
+        My Missions
+      </span>
+      <span
+        class="item"
+      >
+        No Missions Joined
+      </span>
+    </section>
+  </div>
+  <div>
+    <h2
+      class="rocketTitle"
+    >
+       My Rockects
+    </h2>
+    <ul
+      class="reservedRockets"
+    >
+      <li>
+        <p
+          class="noReserve"
+        >
+          No Rocket booked 
+        </p>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <h2
+      class="rocketTitle"
+    >
+       My Dragons
+    </h2>
+    <ul
+      class="reservedRockets"
+    >
+      <li>
+        <p
+          class="noReserve"
+        >
+          No Dragon booked 
+        </p>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
