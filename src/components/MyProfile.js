@@ -12,7 +12,7 @@ const MyProfile = () => {
 
   return (
     <>
-      <div className="ProfileContainer">
+      <div className="mainContainer">
         <section className="myMissions">
           <span className="sectionTitle">My Missions</span>
           {missionsArray.length > 0 ? (
@@ -29,49 +29,50 @@ const MyProfile = () => {
               })}
             </ul>
           ) : (
-            <span>No Missions Joined</span>
+            <span className="item">No Missions Joined</span>
           )}
         </section>
-      </div>
-      <div>
-        <h2 className="rocketTitle"> My Rockects</h2>
-        <table>
-          <ul className="reservedRockets">
-            { rocketFiltered.length > 0 ? (
-              rocketFiltered.map((rocket) => (
-                <tr key={rocket.id}>
-                  <td>
-                    {rocket.rocketName}
-                  </td>
-                </tr>
-              ))
-            ) : (
-              <li>
-                <p className="noReserve">No Rocket booked </p>
-              </li>
-            )}
-          </ul>
-        </table>
-      </div>
-      <div>
-        <h2 className="rocketTitle"> My Dragons</h2>
-        <table>
-          <ul className="reservedRockets">
-            { filteredDragons.length > 0 ? (
-              filteredDragons.map((dragon) => (
-                <tr key={dragon.id}>
-                  <td>
-                    {dragon.name}
-                  </td>
-                </tr>
-              ))
-            ) : (
-              <li>
-                <p className="noReserve">No Dragon booked </p>
-              </li>
-            )}
-          </ul>
-        </table>
+        <section className="myMissions myRockets">
+          <h2 className="sectionTitle"> My Rockects</h2>
+          <table>
+            <ul className="reservedRockets">
+              { rocketFiltered.length > 0 ? (
+                rocketFiltered.map((rocket) => (
+                  <tr key={rocket.id}>
+                    <td className="item">
+                      {rocket.rocketName}
+                    </td>
+                  </tr>
+                ))
+              ) : (
+                <li>
+                  <p className="noReserve item">No Rocket booked </p>
+                </li>
+              )}
+            </ul>
+          </table>
+        </section>
+        <section className="myMissions myDragons">
+          <h2 className="sectionTitle"> My Dragons</h2>
+          <table>
+            <ul className="reservedRockets">
+              { filteredDragons.length > 0 ? (
+                filteredDragons.map((dragon) => (
+                  <tr key={dragon.id}>
+                    <td className="item">
+                      {dragon.name}
+                    </td>
+                  </tr>
+                ))
+              ) : (
+                <li>
+                  <p className="noReserve item">No Dragon booked </p>
+                </li>
+              )}
+            </ul>
+          </table>
+
+        </section>
       </div>
     </>
   );

@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .navBar {
@@ -55,7 +56,7 @@
   text-decoration: none;
 }
 
-.navLinks li a:hover {
+.navLinks li a:focus {
   color: black;
   text-decoration: underline;
   cursor: pointer;
@@ -63,6 +64,15 @@
 
 .navLinks li a:active {
   text-decoration: underline;
+}
+
+.mainContainer {
+  display: flex;
+  gap: 1rem;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
 }
 
 /* ===================== MISSION PAGE ========================= */
@@ -145,24 +155,11 @@ tr:nth-child(even) {
 }
 
 /* ================== MY PROFILE PAGE =================== */
-.ProfileContainer {
-  margin: 1rem 5rem 1rem 5rem;
-  display: flex;
-  gap: 5rem;
-}
-
 .myMissions {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-}
-
-.myRockets {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .sectionTitle {
@@ -178,19 +175,5 @@ tr:nth-child(even) {
   padding: 1rem;
   font-size: 1.5rem;
   font-weight: 500;
-  border-bottom: none;
-  border-top: 0.1rem solid #8d8a8a;
-  border-left: 0.1rem solid #8d8a8a;
-  border-right: 0.1rem solid #8d8a8a;
-}
-
-.item:first-child {
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-}
-
-.item:last-child {
-  border-bottom: 0.1rem solid #8d8a8a;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  border: 1px solid #8d8a8a;
 }
