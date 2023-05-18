@@ -12,7 +12,7 @@ const MyProfile = () => {
 
   return (
     <>
-      <div className="ProfileContainer">
+      <div className="mainContainer">
         <section className="myMissions">
           <span className="sectionTitle">My Missions</span>
           {missionsArray.length > 0 ? (
@@ -29,7 +29,7 @@ const MyProfile = () => {
               })}
             </ul>
           ) : (
-            <span>No Missions Joined</span>
+            <span className="item">No Missions Joined</span>
           )}
         </section>
       </div>
@@ -64,7 +64,6 @@ const MyProfile = () => {
             </li>
           )}
         </ul>
-
       </div>
     </>
   );
