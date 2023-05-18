@@ -32,47 +32,38 @@ const MyProfile = () => {
             <span className="item">No Missions Joined</span>
           )}
         </section>
-        <section className="myMissions myRockets">
-          <h2 className="sectionTitle"> My Rockects</h2>
-          <table>
-            <ul className="reservedRockets">
-              { rocketFiltered.length > 0 ? (
-                rocketFiltered.map((rocket) => (
-                  <tr key={rocket.id}>
-                    <td className="item">
-                      {rocket.rocketName}
-                    </td>
-                  </tr>
-                ))
-              ) : (
-                <li>
-                  <p className="noReserve item">No Rocket booked </p>
-                </li>
-              )}
-            </ul>
-          </table>
-        </section>
-        <section className="myMissions myDragons">
-          <h2 className="sectionTitle"> My Dragons</h2>
-          <table>
-            <ul className="reservedRockets">
-              { filteredDragons.length > 0 ? (
-                filteredDragons.map((dragon) => (
-                  <tr key={dragon.id}>
-                    <td className="item">
-                      {dragon.name}
-                    </td>
-                  </tr>
-                ))
-              ) : (
-                <li>
-                  <p className="noReserve item">No Dragon booked </p>
-                </li>
-              )}
-            </ul>
-          </table>
-
-        </section>
+      </div>
+      <div>
+        <h2 className="rocketTitle"> My Rockects</h2>
+        <ul className="reservedRockets">
+          { rocketFiltered.length > 0 ? (
+            rocketFiltered.map((rocket) => (
+              <li key={rocket.id}>
+                {rocket.rocketName}
+              </li>
+            ))
+          ) : (
+            <li>
+              <p className="noReserve">No Rocket booked </p>
+            </li>
+          )}
+        </ul>
+      </div>
+      <div>
+        <h2 className="rocketTitle"> My Dragons</h2>
+        <ul className="reservedRockets">
+          { filteredDragons.length > 0 ? (
+            filteredDragons.map((dragon) => (
+              <li key={dragon.id}>
+                {dragon.name}
+              </li>
+            ))
+          ) : (
+            <li>
+              <p className="noReserve">No Dragon booked </p>
+            </li>
+          )}
+        </ul>
       </div>
     </>
   );

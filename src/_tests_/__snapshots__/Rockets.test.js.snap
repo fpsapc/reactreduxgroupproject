@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`render correctly and matches the Rockets snapshot 1`] = `
-<DocumentFragment>
-  <div />
-</DocumentFragment>
-`;
