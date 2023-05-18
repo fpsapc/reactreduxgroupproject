@@ -143,3 +143,54 @@ tr:nth-child(even) {
   border-radius: 0.23rem;
   cursor: pointer;
 }
+
+/* ================== MY PROFILE PAGE =================== */
+.ProfileContainer {
+  margin: 1rem 5rem 1rem 5rem;
+  display: flex;
+  gap: 5rem;
+}
+
+.myMissions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.myRockets {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.myMissionsList {
+  list-style: none;
+}
+
+.item {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-bottom: none;
+  border-top: 0.1rem solid #8d8a8a;
+  border-left: 0.1rem solid #8d8a8a;
+  border-right: 0.1rem solid #8d8a8a;
+}
+
+.item:first-child {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.item:last-child {
+  border-bottom: 0.1rem solid #8d8a8a;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
