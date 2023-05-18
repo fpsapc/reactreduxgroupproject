@@ -7,6 +7,7 @@ const MyProfile = () => {
   const { dragons } = useSelector((store) => store.dragons);
   const rocketFiltered = rocketList.filter((rocket) => rocket.reserved === true);
   const filteredDragons = dragons.filter((dragon) => dragon.reserved === true);
+  const missions = useSelector(allMissions);
   const missionsArray = missions.filter((mission) => mission.joined);
 
   return (
