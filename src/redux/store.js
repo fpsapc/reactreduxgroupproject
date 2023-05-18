@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import missionReducer from './mission/missionSlice';
-import dragonReducer from './dragons/dragonSlice';
+import dragonReducer, { fetchDragons } from './dragons/dragonSlice';
 import rocketReducer, { fetchRockets } from './rockets/rocketsSlice';
 
 const store = configureStore({
@@ -12,5 +12,6 @@ const store = configureStore({
 });
 
 store.dispatch(fetchRockets());
+store.dispatch(fetchDragons());
 
 export default store;
