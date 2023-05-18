@@ -19,42 +19,46 @@ exports[`render correctly and matches the My Profile snapshot 1`] = `
         No Missions Joined
       </span>
     </section>
-  </div>
-  <div>
-    <h2
-      class="rocketTitle"
+    <section
+      class="myMissions myRockets"
     >
-       My Rockects
-    </h2>
-    <ul
-      class="reservedRockets"
+      <h2
+        class="sectionTitle"
+      >
+         My Rockects
+      </h2>
+      <ul
+        class="reservedRockets"
+      >
+        <li>
+          <p
+            class="noReserve item"
+          >
+            No Rocket booked 
+          </p>
+        </li>
+      </ul>
+    </section>
+    <section
+      class="myMissions myDragons"
     >
-      <li>
-        <p
-          class="noReserve"
-        >
-          No Rocket booked 
-        </p>
-      </li>
-    </ul>
-  </div>
-  <div>
-    <h2
-      class="rocketTitle"
-    >
-       My Dragons
-    </h2>
-    <ul
-      class="reservedRockets"
-    >
-      <li>
-        <p
-          class="noReserve"
-        >
-          No Dragon booked 
-        </p>
-      </li>
-    </ul>
+      <h2
+        class="sectionTitle"
+      >
+         My Dragons
+      </h2>
+      <ul
+        class="reservedRockets"
+      >
+        <li>
+          <p
+            class="noReserve item"
+          >
+            No Dragon booked 
+          </p>
+        </li>
+      </ul>
+    </section>
   </div>
 </DocumentFragment>
 `;
