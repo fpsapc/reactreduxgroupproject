@@ -1,0 +1,54 @@
+.dragons {
+  width: 80%;
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.dragon-container {
+  display: flex;
+  gap: 1em;
+}
+
+.dragon-img {
+  width: 14em;
+  height: 11em;
+}
+
+.dragon-name {
+  font-size: 1.7em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+.dragon-type {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.dragon-button {
+  background-color: #0275d8;
+  color: white;
+  font-size: 1em;
+  padding: 0.5em;
+  border: none;
+  border-radius: 10px;
+}
+
+.cancel {
+  background-color: rgb(201, 194, 194);
+  color: black;
+  font-size: 1em;
+  padding: 0.5em;
+  border: 1px solid #0275d8;
+  border-radius: 10px;
+}
+
+.reserved {
+  background-color: green;
+  color: white;
+  font-size: 0.7em;
+  border-radius: 5px;
+  padding: 0 0.2em;
+}
